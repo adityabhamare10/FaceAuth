@@ -47,8 +47,10 @@ dependencies {
     implementation ("androidx.camera:camera-lifecycle:1.1.0-beta01")
     implementation ("androidx.camera:camera-view:1.0.0-alpha29")
 
-    // Retrofit for networking
+    // Retrofit and OkHttp for networking
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.2")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.2")
 
 }
