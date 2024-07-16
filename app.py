@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-reference_image_path = 'faces/aditya.jpg'
+reference_image_path = 'known_faces/aditya_img'
 reference_image = face_recognition.load_image_file(reference_image_path)
 reference_encoding = face_recognition.face_encodings(reference_image)[0]
 

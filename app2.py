@@ -11,10 +11,10 @@ known_face_encodings = []
 known_face_names = []
 
 
-# Assume we have preloaded known faces in a folder called 'faces'
+# Assume we have preloaded known known_faces in a folder called 'known_faces'
 def load_known_faces():
-    for image_name in os.listdir('faces'):
-        image_path = os.path.join('faces', image_name)
+    for image_name in os.listdir('known_faces'):
+        image_path = os.path.join('known_faces', image_name)
         known_image = face_recognition.load_image_file(image_path)
         known_face_encoding = face_recognition.face_encodings(known_image)[0]
         known_face_encodings.append(known_face_encoding)
@@ -53,7 +53,7 @@ def upload_file():
 
     uploaded_face_encoding = uploaded_face_encodings[0]
 
-    # Compare faces
+    # Compare known_faces
     face_distances = face_recognition.face_distance(known_face_encodings, uploaded_face_encoding)
     best_match_index = np.argmin(face_distances)
     match_percentage = face_confidence(face_distances[best_match_index])
