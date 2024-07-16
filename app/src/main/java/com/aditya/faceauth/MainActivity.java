@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private Button captureBtn, uploadBtn;
     private TextView percentageTextView;
     private OkHttpClient client;
-    private static final String SERVER_URL = "http://192.168.103.180:5000/upload";
+    private static final String SERVER_URL = "<Your-server-URL>/upload";
     private String currentPhotoPath;
 
     @Override
